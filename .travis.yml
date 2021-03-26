@@ -29,6 +29,7 @@ jobs:
       script: bash .manylinux.sh
       
     - name: 64-bit aarch64 manylinux wheels (all Pythons)
+      arch: arm64
       services: docker
       env: DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
       install: docker pull $DOCKER_IMAGE
